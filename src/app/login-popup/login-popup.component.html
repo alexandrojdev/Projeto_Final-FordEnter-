@@ -1,0 +1,30 @@
+<div class="container_cabecalho_um">
+    <div class="login-wrapper" style="position: relative;">
+      <a href="#" class="nome_icon" (click)="togglePopup()">
+        <img src="icon-login.png" alt="icon-login" width="26" height="26"> Login
+      </a>
+  
+      <!-- Pop-up login aparece aqui -->
+      <div *ngIf="popupAberto" class="popup-content">
+        <span class="fechar" (click)="fecharPopup()">&times;</span>
+        <h3>Login</h3>
+        <form (submit)="fazerLogin()">
+          <label for="email">Digite seu e-mail:</label>
+          <input type="email" id="email" [(ngModel)]="email" name="email" required>
+  
+          <label for="senha">Digite sua senha:</label>
+          <input type="password" id="senha" [(ngModel)]="senha" name="senha" required>
+  
+          <button type="submit">Entrar</button>
+        </form>
+  
+        <!-- Botão de Cadastro -->
+        <a href="/cadastro.html" target="_blank" class="botao-cadastrar">Fazer Parte</a>
+      </div>
+    </div>
+  
+    <a href="#" class="nome_icon">
+      <img src="icon-brazil.png" alt="icon-brazil" width="26" height="26"> BR
+    </a>
+  </div>
+  

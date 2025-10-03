@@ -1,0 +1,35 @@
+.search-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 30px;
+  }
+  
+  .search-overlay input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+    font-size: 16px;
+    width: 250px;
+  }
+
+  .search-overlay button {
+    background: #fff;
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+  }
+  
