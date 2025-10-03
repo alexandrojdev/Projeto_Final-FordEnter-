@@ -1,0 +1,58 @@
+<div class="login-container">
+    <div class="login-box">
+      <div class="logo">
+        <img src="/img/logo_selflove_oficial.png" alt="SelfLove Logo" width="140">
+      </div>
+      
+      <h4 class="h4-pag">Faça seu cadastro.</h4>
+      <h4 class="h4-1-pag">Preencha os dados para criar sua conta.</h4>
+      
+      <form #cadastroForm="ngForm" (ngSubmit)="onSubmit(cadastroForm)">
+        <div class="form-group input-wrapper">
+          <label for="nome"><i class="fas fa-user"></i> Nome completo</label>
+          <input type="text" id="nome" name="nome" [(ngModel)]="usuario.nome" placeholder="Digite seu nome completo *" required>
+          <span class="clear-btn" (click)="usuario.nome=''">&times;</span>
+        </div>
+        
+        <div class="form-group input-wrapper">
+          <label for="email"><i class="fas fa-envelope"></i> E-mail</label>
+          <input type="email" id="email" name="email" [(ngModel)]="usuario.email" placeholder="Digite seu e-mail *" required>
+          <span class="clear-btn" (click)="usuario.email=''">&times;</span>
+        </div>
+        
+        <div class="form-group input-wrapper">
+          <label for="cpf"><i class="fas fa-id-card"></i> CPF</label>
+          <input type="text" id="cpf" name="cpf" [(ngModel)]="usuario.cpf" placeholder="Digite seu CPF *" required (input)="mascaraCPF()">
+          <span class="clear-btn" (click)="usuario.cpf=''">&times;</span>
+        </div>
+        
+        <div class="form-group">
+          <label for="senha"><i class="fas fa-lock"></i> Senha</label>
+          <input type="password" id="senha" name="senha" [(ngModel)]="usuario.senha" placeholder="Crie uma senha (mínimo 8 caracteres) *" minlength="8" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="confirmarSenha"><i class="fas fa-check-circle"></i> Confirmar senha</label>
+          <input type="password" id="confirmarSenha" name="confirmarSenha" [(ngModel)]="usuario.confirmarSenha" placeholder="Confirme sua senha *" required>
+        </div>
+        
+        <div class="form-group lembrar-senha input-wrapper">
+          <input type="checkbox" id="concordarTermos" name="concordarTermos" [(ngModel)]="usuario.concorda" required>
+          <label class="lab-lembrar-senha" for="concordarTermos">
+            Concordo com os <a href="/pg_termos_de_servico.html">Termos de Serviços</a> e <a href="/pg_politica_de_priv.html">Política de Privacidade</a>
+          </label>
+        </div>
+        
+        <button class="botao-cadastrar" type="submit">Cadastrar</button>
+      </form>
+      
+      <div class="links">
+        <a href="/pg_login.html">Já tenho uma conta</a>
+      </div>
+      
+      <div class="footer">
+        © 2025 SELFLOVE - Todos os direitos reservados
+      </div>
+    </div>
+  </div>
+  
