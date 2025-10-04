@@ -1,0 +1,42 @@
+<div class="login-container">
+    <div class="login-box">
+        <div class="logo">
+            <img src="logo_selflove_oficial.png" alt="Logo SelfLove" routerLink="pg-home">
+        </div>
+
+        <h4 class="h4-pag">Esqueceu sua senha?</h4>
+        <h4 class="h4-1-pag">Informe seu e-mail para recuperar a senha</h4>
+
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group input-wrapper">
+                <label for="email"><i class="fas fa-envelope"></i> E-mail</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="O mesmo de cadastro." 
+                    required
+                    [(ngModel)]="email"
+                >
+                <span class="clear-btn" (click)="clearEmail()" [hidden]="!email">&times;</span>
+            </div>
+
+            <button 
+                type="submit" 
+                class="botao-recuperar" 
+                [disabled]="isSending"
+            >
+                {{ isSending ? 'Enviando...' : 'Enviar link' }}
+            </button>
+        </form>
+
+        <div class="links">
+            <a routerLink="/pg-login">Voltar para o Login</a>
+            <a href="#">Tentar de outro jeito</a>
+        </div>
+
+        <div class="footer">
+            © 2025 SelfLove - Todos os direitos reservados
+        </div>
+    </div>
+</div>

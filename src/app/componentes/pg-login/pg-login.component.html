@@ -1,0 +1,54 @@
+<div class="login-container">
+    <div class="logo">
+        <img src="logotipo-selflove.png" alt="SELFLOVE Logo" routerLink="/pg-home">
+    </div>
+
+    <h4 class="h4-pag">Seja bem-vindo!</h4>
+    <h4 class="h4-1-pag">Faça o login para ter acesso à sua conta.</h4>
+
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group input-wrapper">
+            <label for="username"><i class="fas fa-user"></i> Usuário</label>
+            <input 
+                type="text" 
+                id="username" 
+                placeholder="Digite seu CPF ou e-mail *" 
+                required
+                [(ngModel)]="username"
+                name="username" 
+            >
+            <span class="clear-btn" (click)="clearUsername()" [hidden]="!username">&times;</span>
+        </div>
+
+        <div class="form-group input-wrapper">
+            <label for="password"><i class="fas fa-lock"></i> Senha</label>
+            <input 
+                [type]="passwordFieldType" 
+                id="password" 
+                placeholder="Digite sua senha *" 
+                required
+                [(ngModel)]="password"
+                name="password"
+            >
+            <span class="toggle-password" (click)="togglePasswordVisibility()">
+                <i id="eyeIcon" class="fas" [ngClass]="{'fa-eye-slash': isPasswordVisible, 'fa-eye': !isPasswordVisible}"></i>
+            </span>
+        </div>
+
+        <div class="form-group lembrar-senha">
+            <input type="checkbox" id="lembrarSenha" name="lembrarSenha" [(ngModel)]="rememberMe">
+            <label class="lab-lembrar-senha" for="lembrarSenha">Lembrar minha senha</label>
+        </div>
+
+        <button class="botao-entrar" type="submit">Entrar</button>
+    </form>
+
+    <div class="links">
+        <a routerLink="/pg-esqueci-senha">Esqueci minha senha</a>
+        <a routerLink="/pg-cadastro">Primeiro acesso</a>
+    </div>
+
+    <div class="footer">
+        © 2025 SELFLOVE - Todos os direitos reservados
+    </div>
+</div>
