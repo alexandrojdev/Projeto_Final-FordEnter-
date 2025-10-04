@@ -1,59 +1,84 @@
-# MeuProjetoAngular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.6.
+# 💇‍♀️ SelfLove: Plataforma de Agendamento de Cuidados Pessoais
 
-## Development server
+## 📝 Descrição do Projeto
 
-To start a local development server, run:
+O **SelfLove** é uma plataforma digital desenvolvida como Projeto de Conclusão do curso **Programador Frontend** (Programa FordEnter | Ford e SENAI).
 
-```bash
-ng serve
-```
+O objetivo principal é ser um **facilitador** no setor de cuidados pessoais e bem-estar, conectando clientes a estabelecimentos locais como salões de beleza, barbearias, manicures e esteticistas. A plataforma permite que os usuários **localizem prestadores de serviços próximos** e realizem o agendamento de forma rápida e intuitiva.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Problema Solucionado
 
-## Code scaffolding
+Eliminar a necessidade de ligações telefônicas ou mensagens em horários comerciais, proporcionando uma experiência de agendamento **24/7** e otimizando a agenda de profissionais e estabelecimentos.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+-----
 
-```bash
-ng generate component component-name
-```
+## 🚀 Tecnologias e Stack
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Este projeto é uma aplicação Single Page Application (SPA) construída com as seguintes tecnologias:
 
-```bash
-ng generate --help
-```
+| Categoria | Tecnologia | Uso no Projeto |
+| :--- | :--- | :--- |
+| **Framework** | **Angular** (Standalone Components) | Estrutura modular da aplicação, componentes reutilizáveis e roteamento. |
+| **Linguagem** | **TypeScript** | Adicionar tipagem estática e escalabilidade ao JavaScript. |
+| **Estilização** | **CSS3 Puro / SCSS** | Criação de layouts responsivos e design coeso (Mobile First). |
+| **UX/UI** | **SweetAlert2** | Utilizado para fornecer feedbacks visuais (sucesso, erro, carregamento) ao usuário. |
+| **Ícones** | **Font Awesome** | Inclusão de ícones para melhor usabilidade e clareza do formulário. |
 
-## Building
+-----
 
-To build the project run:
+## ✨ Principais Funcionalidades
 
-```bash
-ng build
-```
+  * **Recuperação de Acesso:** Fluxo de recuperação de senha por e-mail com validações de frontend.
+  * **Rotas e Navegação:** Implementação de rotas protegidas e navegação fluida entre Login, Home e páginas institucionais (Sobre Nós, Política de Privacidade).
+  * **Componentização:** Criação de componentes Standalone para máxima reusabilidade e clareza de código (ex: `CabecalhoComponent`, `FooterComponent`, `FormularioComponent`).
+  * **Validação de Formulários:** Validação em tempo real (JavaScript/TypeScript) para garantir que os dados de cadastro e login estejam no formato correto.
+  * **Design Responsivo:** Layout adaptável a diferentes tamanhos de tela (desktop, tablet e mobile).
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+-----
 
-## Running unit tests
+## 🛠 Como Rodar o Projeto Localmente
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Para clonar e executar este projeto em sua máquina, siga os passos abaixo:
 
-```bash
-ng test
-```
+### Pré-requisitos
 
-## Running end-to-end tests
+  * **Node.js** (versão LTS recomendada)
+  * **Angular CLI** (`npm install -g @angular/cli`)
 
-For end-to-end (e2e) testing, run:
+### Instalação
 
-```bash
-ng e2e
-```
+1.  **Clone o Repositório:**
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+    ```bash
+    git clone https://github.com/alexandrojdev/Projeto_Final-FordEnter-
+    cd Projeto_Final-FordEnter-
+    ```
 
-## Additional Resources
+2.  **Instale as Dependências:**
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+    ```bash
+    npm install
+    ```
+
+3.  **Execute a Aplicação:**
+
+    ```bash
+    ng serve
+    ```
+
+O projeto estará disponível em `http://localhost:4200/`.
+
+-----
+
+## 🎓 Sobre o Desenvolvedor
+
+Este projeto foi desenvolvido por **Alexandro Jesus** como requisito final para a obtenção do certificado de **Programador Frontend** no programa **FordEnter**, uma iniciativa entre a **Ford** e o **SENAI CIMATEC**.
+
+  * **LinkedIn:** https://www.linkedin.com/in/alexandro-jesus-tec/
+  * **Email:** alexandrosjesus10@gmail.com
+  * **Programa:** <FordEnter> | SENAI CIMATEC
+
+-----
+
+\<sub\>© 2025 SelfLove - Todos os direitos reservados.\</sub\>

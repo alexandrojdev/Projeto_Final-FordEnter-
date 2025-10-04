@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // IMPORTANTE
+import { RouterLink } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-pg-cadastro',
   standalone: true,
-  imports: [FormsModule],  // <- preciso para ngModel e ngForm
+  imports: [FormsModule, RouterLink],  // <- preciso para ngModel e ngForm
   templateUrl: './pg-cadastro.component.html',
   styleUrls: ['./pg-cadastro.component.css']
 })

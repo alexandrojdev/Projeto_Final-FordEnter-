@@ -1,7 +1,7 @@
 <div class="login-container">
     <div class="login-box">
       <div class="logo">
-        <img src="/img/logo_selflove_oficial.png" alt="SelfLove Logo" width="140">
+        <img src="logo_selflove_oficial.png" alt="SelfLove Logo" routerLink="/pg-home" width="140">
       </div>
       
       <h4 class="h4-pag">Faça seu cadastro.</h4>
@@ -39,7 +39,7 @@
         <div class="form-group lembrar-senha input-wrapper">
           <input type="checkbox" id="concordarTermos" name="concordarTermos" [(ngModel)]="usuario.concorda" required>
           <label class="lab-lembrar-senha" for="concordarTermos">
-            Concordo com os <a href="/pg_termos_de_servico.html">Termos de Serviços</a> e <a href="/pg_politica_de_priv.html">Política de Privacidade</a>
+            Concordo com os <a routerLink="/pg-termos-servico">Termos de Serviços</a> e <a routerLink="/pg-politica-priv">Política de Privacidade</a>
           </label>
         </div>
         
@@ -47,7 +47,7 @@
       </form>
       
       <div class="links">
-        <a href="/pg_login.html">Já tenho uma conta</a>
+        <a routerLink="/pg-login">Já tenho uma conta</a>
       </div>
       
       <div class="footer">
