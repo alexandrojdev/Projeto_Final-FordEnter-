@@ -81,4 +81,4 @@ Este projeto foi desenvolvido por **Alexandro Jesus** como requisito final para 
 
 -----
 
-\<sub\>© 2025 SelfLove - Todos os direitos reservados.\</sub\>
+© 2025 SelfLove - Todos os direitos reservados.
