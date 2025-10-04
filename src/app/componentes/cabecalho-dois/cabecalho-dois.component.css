@@ -1,0 +1,160 @@
+/* ======================================= */
+/* ESTILOS BASE (DESKTOP) */
+/* ======================================= */
+
+.container_cabecalho_dois {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    /* Usa space-between para separar o logo e o menu */
+    justify-content: space-between; 
+    padding: 0 90px;
+    background-color: #fff;
+    z-index: 10; 
+}
+
+.container_cabecalho_dois img {
+    margin-right: 30px;
+}
+
+/* Logo à esquerda */
+.container_cabecalho_dois a {
+    z-index: 1; 
+    /* Garante que o logo não seja espremido */
+    flex-shrink: 0; 
+}
+
+/* Menu principal (horizontal em desktop) */
+.menu_cabecalho {
+    display: flex;
+    gap: 70px;
+    list-style: none;
+    padding: 6px 30px;
+    margin: 0; 
+    background-color: #BF1573;
+    border-radius: 25px;
+    font-family: sans-serif;
+    /* Garante que o menu não seja espremido, mas permite a quebra no mobile */
+    flex-shrink: 1; 
+}
+
+/* Estilização dos links */
+.menu_cabecalho li a {
+    text-decoration: none;
+    color: #fff;
+    white-space: nowrap; 
+}
+
+/* Esconde o botão hamburguer por padrão (em desktop) */
+.menu_hamburguer {
+    display: none; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Estilização das barras do hamburguer */
+.menu_hamburguer span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #BF1573;
+    /* Adiciona a transição para a animação suave */
+    transition: all 0.3s ease; 
+}
+
+/* ======================================= */
+/* ESTILOS DE ANIMAÇÃO DO HAMBURGUER (Ao clicar) */
+/* ======================================= */
+
+/* Transforma o ícone hamburguer em um 'X' */
+.menu_hamburguer.is-open span:nth-child(1) {
+    /* Rotaciona a primeira linha e a move para o centro */
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu_hamburguer.is-open span:nth-child(2) {
+    /* Esconde a linha do meio */
+    opacity: 0;
+}
+
+.menu_hamburguer.is-open span:nth-child(3) {
+    /* Rotaciona a terceira linha e a move para o centro */
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* ======================================= */
+/* MEDIA QUERY: TELAS MÉDIAS (max-width: 1024px) */
+/* ======================================= */
+
+@media (max-width: 1024px) {
+    .container_cabecalho_dois {
+        padding: 0 40px; 
+    }
+
+    .menu_cabecalho {
+        gap: 25px; /* Reduz um pouco mais o gap para caber em tablets */
+        padding: 6px 15px; 
+    }
+}
+
+
+/* ======================================= */
+/* MEDIA QUERY: TELAS PEQUENAS (max-width: 768px) */
+/* ======================================= */
+
+@media (max-width: 768px) {
+    .container_cabecalho_dois {
+        padding: 0 20px; 
+    }
+
+    /* 1. MOSTRA o botão hamburguer */
+    .menu_hamburguer {
+        display: block;
+        z-index: 11; /* Garante que o botão fique acima do menu dropdown */
+    }
+
+    /* 2. ESCONDE o menu horizontal por padrão */
+    .menu_cabecalho {
+        display: none;
+        
+        /* Torna o menu um dropdown de largura total */
+        position: absolute;
+        top: 80px; 
+        left: 0;
+        width: 100%; 
+        flex-direction: column; /* Empilha os itens verticalmente */
+        
+        background-color: #BF1573;
+        border-radius: 0; 
+        padding: 10px 0;
+        z-index: 9;
+    }
+
+    /* 3. Estilo para o menu ATIVO (adicionado via Angular/TypeScript) */
+    .menu_cabecalho.active {
+        display: flex; 
+    }
+    
+    /* 4. Estilização dos ITENS da lista para mobile */
+    .menu_cabecalho li {
+        width: 100%; /* Ocupa 100% da largura do menu */
+        text-align: center; 
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    }
+
+    .menu_cabecalho li:last-child {
+        border-bottom: none;
+    }
+
+    /* 5. Estilização dos LINKS para mobile */
+    .menu_cabecalho li a {
+        display: block;
+        padding: 10px; /* Aumenta a área de clique */
+        white-space: normal;
+    }
+}

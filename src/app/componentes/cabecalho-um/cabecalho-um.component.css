@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+
+.container_cabecalho_um {
+    font-size: 15px;
+    background-color: #D99379;
+    height: 51px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding-right: 50px;
+  }
+
+  .container_cabecalho_um a {
+    display: flex;
+    align-items: center;   /* Centraliza imagem e texto verticalmente */
+    gap: 5px;               /* Espaço entre imagem e texto */
+    text-decoration: none; /* Opcional: remove sublinhado */
+    color: inherit;         /* Opcional: mantém cor herdada */
+}

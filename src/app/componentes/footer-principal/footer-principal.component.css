@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* ---------------------------------------------------------------- */
+/* ESTILOS PARA DESKTOP (Padrão) */
+/* ---------------------------------------------------------------- */
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px; /* Tamanho definido para desktop */
+    background-color: #D99379;
+    color: white;
+    display: flex; 
+    flex-direction: column;
+}
+
+.lista_rodape {
+    list-style: none;
+    display: flex;
+    position: relative;
+    gap: 30px;
+    padding: 40px 80px 10px 80px; 
+    padding-left: 80px; 
+    margin-bottom: 20px;
+}
+
+.lista_rodape li a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+.icones_donwloads {
+    position:absolute; /* Posição absoluta para desktop */
+    bottom: 130px; 
+    right: 20px; 
+    display: flex; 
+    gap: 16px; 
+    z-index: 1000; 
+}
+
+.rodape_um::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid white; 
+    margin: 10px 40px 0 40px ; 
+    margin-top: 1px; 
+    width: 168%; 
+}
+
+hr {
+    border: 1px solid;
+}
+ 
+.logo_branca {
+    text-decoration: none;
+    color: #ffff;
+}
+
+.rodape_dois_container {
+    margin-top: 30px;
+    display: flex; 
+    justify-content: space-between;
+    padding: 0 4rem;
+}
+
+/* ---------------------------------------------------------------- */
+/* RESPONSIVIDADE - ESTILOS PARA TELAS MENORES (Max 768px) */
+/* ---------------------------------------------------------------- */
+
+@media screen and (max-width: 768px) {
+    
+    /* 1. Resetando o footer para ser flexível em altura */
+    footer {
+        height: auto; 
+        padding-bottom: 15px;
+    }
+
+    /* 2. Lista de Links (Lista_Rodape) */
+    .lista_rodape {
+        flex-wrap: wrap; 
+        justify-content: center; 
+        padding: 30px 10px 10px 10px; 
+        gap: 15px; 
+    }
+    
+    .lista_rodape li {
+        margin: 0;
+    }
+
+    /* 3. Ícones de Download */
+    .icones_donwloads {
+        position: static; /* Remove o posicionamento absoluto */
+        justify-content: center; 
+        margin: 15px 0; 
+        width: 100%; 
+        order: -1;
+    }
+    
+    /* 4. Linha Divisória */
+    hr {
+        margin: 10px 0;
+    }
+
+    /* 5. Container de Logo e Redes Sociais (Ajustes Finais) */
+    .rodape_dois_container {
+        background-color: #D99379;
+        flex-direction: column; /* Empilha o logo e os ícones */
+        align-items: center; /* Centraliza horizontalmente */
+        padding: 1rem 1rem;
+        text-align: center;
+    }
+    
+    /* Aumentando o espaçamento entre o bloco do Logo e os ícones de Redes Sociais */
+    .rodape_dois_container .logo_branca {
+        margin-bottom: 25px; /* Mais espaço para separar os blocos */
+        display: block; 
+    }
+
+    /* Garantindo que as redes sociais fiquem centralizadas */
+    .icones_redes_sociais {
+        display: flex;
+        gap: 10px;
+        justify-content: center; /* Centraliza os ícones */
+        width: 100%;
+    }
+}

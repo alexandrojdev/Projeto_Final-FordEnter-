@@ -1,0 +1,25 @@
+<div class="container_cabecalho_dois">
+    <a href="#">
+        <img src="logotipo-selflove.png" alt="icon-selflove"> 
+    </a>
+
+<button 
+    class="menu_hamburguer" 
+    (click)="toggleMenu()"
+    [class.is-open]="isMenuOpen"> 
+    
+    <span></span> 
+    <span></span>
+    <span></span>
+</button>
+
+    <ul class="menu_cabecalho" [class.active]="isMenuOpen">
+        <li><a href="#">Salões de Beleza</a></li>
+        <li><a href="#">Barbearias</a></li>
+        <li><a href="#">Manicure & Nail Designer</a></li>
+        <li><a href="#">Esteticistas</a></li>
+        <li><a href="#">Sombrancelhas & Cílios</a></li>
+        <li><a href="#">Spa & Massagem</a></li>
+        <li><a href="#">Make Up</a></li>
+    </ul>
+</div>

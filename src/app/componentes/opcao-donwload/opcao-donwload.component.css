@@ -1,0 +1,135 @@
+/* ======================================= */
+/* ESTILOS BASE (DESKTOP: LADO A LADO) */
+/* ======================================= */
+
+.container_donwloads_app {
+    display: flex;
+    /* Permite quebra quando não couberem mais (mobile) */
+    flex-wrap: wrap; 
+    /* Centraliza o conjunto de cards */
+    justify-content: center;
+    padding: 20px; 
+}
+
+.self_love, .selflove_biz {
+    display: flex;
+    /* Mantendo a largura fixa original para desktop. */
+    width: 615px; 
+    /* Altura fixa original. */
+    height: 808px; 
+    background-color: #fff;
+    /* Mantendo a margem que separa os cards. */
+    margin: 20px; 
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; 
+    /* Garantimos que a largura não seja espremida (default) */
+    flex-shrink: 0; 
+}
+
+.donwload_selflove, .biz {
+    text-decoration: none;
+    color: #656565;
+    padding: 30px;
+    white-space: nowrap; 
+}
+
+.corpo_selflove, .corpo_selfbiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    text-align: center;
+    height: 100%; 
+    padding: 0; 
+}
+
+/* ... Estilos de H2, P, e Botões (mantidos) ... */
+
+.corpo_selflove h2 { color: #D97E4A; font-size: 32px; }
+.corpo_selfbiz h2 { color: #BF1573; font-size: 32px; }
+
+.corpo_selflove p, .corpo_selfbiz p {
+    color: #656565;
+    font-size: 16px;
+    padding: 0 15px; 
+}
+
+.corpo_selflove button, .corpo_selfbiz button {
+    display: block;
+    margin: 0 auto 20px auto; 
+    height: 46px;
+    width: 258px;
+    border-radius: 10px;
+    color: #fff;
+    border: 0;
+    transition: all 0.3s ease-in-out; 
+}
+
+.corpo_selflove button { background-color: #D97E4A; }
+.corpo_selfbiz button { background-color: #BF1573; }
+
+.corpo_selflove button:hover {
+    background-color: #fff; color: #D97E4A; font-weight: bold; cursor: pointer;
+    box-shadow: 8px 5px 10px rgba(0, 0, 0, 0.5); 
+    border: 1px solid #D97E4A; 
+}
+
+.corpo_selfbiz button:hover {
+    background-color: #fff; color: #BF1573; font-weight: bold; cursor: pointer;
+    box-shadow: 8px 5px 10px rgba(0, 0, 0, 0.5); 
+    border: 1px solid #BF1573; 
+}
+
+.corpo_selflove img, .corpo_selfbiz img {
+    margin: 0;
+    padding: 0;
+    display: block;
+    /* Torna as imagens fluidas no mobile */
+    max-width: 100%; 
+    height: auto;
+}
+
+/* ======================================= */
+/* MEDIA QUERY: TELAS MÉDIAS (Ajusta a margem para telas de ~1280px) */
+/* ======================================= */
+
+@media (max-width: 1300px) {
+    .self_love, .selflove_biz {
+        /* Reduz a margem entre os cards para que caibam lado a lado em monitores menores */
+        margin: 10px;
+    }
+}
+
+
+/* ======================================= */
+/* MEDIA QUERY: TELAS PEQUENAS (EMPILHAMENTO VERTICAL) - max-width: 850px */
+/* ======================================= */
+
+@media (max-width: 850px) {
+    .container_donwloads_app {
+        padding: 10px;
+    }
+    
+    .self_love, .selflove_biz {
+        /* CRUCIAL: Ocupa a largura total (100%) da tela para empilhamento */
+        width: 100%; 
+        /* Resetamos a altura e a margem para mobile */
+        height: auto; 
+        margin: 15px 0; 
+        /* Permite que o card se estique e preencha o 100% (sobrescrevendo flex-shrink: 0;) */
+        flex-shrink: 1; 
+    }
+
+    /* Redução de fonte para mobile */
+    .corpo_selflove h2, .corpo_selfbiz h2 {
+        font-size: 24px;
+        padding: 10px 0;
+    }
+
+    .corpo_selflove p, .corpo_selfbiz p {
+        text-align: center;
+        margin-bottom: 20px; 
+    }
+}
