@@ -1,0 +1,82 @@
+/* Reset básico */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* Adicionando min-height para garantir que o body ocupe pelo menos a tela inteira */
+    min-height: 100vh; 
+}
+
+
+/* Layout com menu lateral */
+.container {
+    display: flex;
+    /* REMOVIDO: height: 100vh; */
+    /* Agora, o .container (que é o seu main) vai se expandir conforme o conteúdo */
+}
+
+/* Lista de links (menu) */
+.lista_site {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 220px;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+    /* Ajustado para min-height. Assim, ele acompanha o tamanho do conteúdo, mas garante pelo menos a altura da tela. */
+    min-height: 100vh; 
+}
+
+.container_sections h2 {
+    justify-content: center;
+}
+
+.lista_site li a {
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+.lista_site li a:hover {
+    border-left: 3px solid #BF1573;
+}
+
+.container_sections {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 30px;
+}
+
+/* Cada seção: imagem + texto lado a lado */
+.section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Inverter ordem: texto à esquerda, imagem à direita */
+.section.reverse {
+    flex-direction: row-reverse;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ajustes de texto */
+.section .texto h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.section .texto h4 {
+    margin: 0 0 10px 0;
+}
+
+.section .texto p {
+    margin: 0;
+    line-height: 1.5;
+}

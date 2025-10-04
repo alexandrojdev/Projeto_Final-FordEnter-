@@ -8,7 +8,8 @@ import { FooterPrincipalComponent } from "../footer-principal/footer-principal.c
 
 @Component({
   selector: 'app-pg-home',
-  imports: [CarrosselComponent, CabecalhoUmComponent, CabecalhoDoisComponent, OpcaoDonwloadComponent, BlocoRecomendacoesComponent, FooterPrincipalComponent],
+  imports: [CarrosselComponent, CabecalhoUmComponent, CabecalhoDoisComponent, 
+    OpcaoDonwloadComponent, BlocoRecomendacoesComponent, FooterPrincipalComponent, ],
   templateUrl: './pg-home.component.html',
   styleUrl: './pg-home.component.css'
 })
