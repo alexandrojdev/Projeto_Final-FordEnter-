@@ -6,10 +6,11 @@ import { OpcaoDonwloadComponent } from "../opcao-donwload/opcao-donwload.compone
 import { BlocoRecomendacoesComponent } from "../bloco-recomendacoes/bloco-recomendacoes.component";
 import { FooterPrincipalComponent } from "../footer-principal/footer-principal.component";
 
+
 @Component({
   selector: 'app-pg-home',
   imports: [CarrosselComponent, CabecalhoUmComponent, CabecalhoDoisComponent, 
-    OpcaoDonwloadComponent, BlocoRecomendacoesComponent, FooterPrincipalComponent, ],
+    OpcaoDonwloadComponent, BlocoRecomendacoesComponent, FooterPrincipalComponent,],
   templateUrl: './pg-home.component.html',
   styleUrl: './pg-home.component.css'
 })
