@@ -15,8 +15,4 @@ import { FooterPrincipalComponent } from "../footer-principal/footer-principal.c
   styleUrl: './pg-home.component.css'
 })
 export class PgHomeComponent {
-
-  
-
-
-}
+};

@@ -9,6 +9,8 @@ import { PgTermosServicoComponent } from './componentes/pg-termos-servico/pg-ter
 import { PgPoliticaPrivComponent } from './componentes/pg-politica-priv/pg-politica-priv.component';
 import { PgSegurancaComponent } from './componentes/pg-seguranca/pg-seguranca.component';
 import { PgContatoComponent } from './componentes/pg-contato/pg-contato.component';
+import { BuscarServicosComponent } from './componentes/buscar-servicos/buscar-servicos.component';
+import { PgUsuarioComponent } from './componentes/pg-usuario/pg-usuario.component';
 
 export const routes: Routes = [
 
@@ -55,5 +57,13 @@ export const routes: Routes = [
     {
         path:'pg-contato',
         component: PgContatoComponent,
+    },
+    {
+        path:'buscar-servicos',
+        component: BuscarServicosComponent,
+    },
+    {
+        path:'pg-usuario',
+        component: PgUsuarioComponent,
     }
 ];

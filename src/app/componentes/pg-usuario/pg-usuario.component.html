@@ -1,1 +1,74 @@
-<p>pg-usuario works!</p>
+<body>
+    <app-cabecalho-dois></app-cabecalho-dois>
+    <app-buscar-servicos></app-buscar-servicos>
+  
+    <main class="container">
+      <aside class="menu-lateral">
+        <div class="perfil-usuario">
+          <img src="/person_notif 1.png" alt="Foto do Usuário">
+          <h3>Alexandro Jesus</h3>
+        </div>
+  
+        <ul class="lista_site">
+          <li (click)="mostrarConteudo('agendamentos')" [class.ativo]="conteudoSelecionado === 'agendamentos'">
+            <a>Agendamentos</a>
+          </li>
+          <li (click)="mostrarConteudo('familia')" [class.ativo]="conteudoSelecionado === 'familia'">
+            <a>Família & Amigos</a>
+          </li>
+          <li (click)="mostrarConteudo('favoritos')" [class.ativo]="conteudoSelecionado === 'favoritos'">
+            <a>Meus favoritos</a>
+          </li>
+          <li (click)="mostrarConteudo('configuracoes')" [class.ativo]="conteudoSelecionado === 'configuracoes'">
+            <a>Configurações da conta</a>
+          </li>
+          <li (click)="mostrarConteudo('avaliacoes')" [class.ativo]="conteudoSelecionado === 'avaliacoes'">
+            <a>Avaliações</a>
+          </li>
+          <li (click)="mostrarConteudo('sair')" [class.ativo]="conteudoSelecionado === 'sair'">
+            <a>Sair</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="conteudo-principal">
+        <div [ngSwitch]="conteudoSelecionado">
+          <div *ngSwitchCase="'agendamentos'">
+            <h2>Meus Agendamentos</h2>
+            <p>Aqui você verá a lista dos seus próximos agendamentos.</p>
+            </div>
+  
+          <div *ngSwitchCase="'familia'">
+            <h2>Família & Amigos</h2>
+            <p>Gerencie aqui as pessoas da sua família e amigos.</p>
+          </div>
+  
+          <div *ngSwitchCase="'favoritos'">
+            <h2>Meus Favoritos</h2>
+            <p>Veja aqui os serviços e profissionais que você marcou como favoritos.</p>
+          </div>
+  
+          <div *ngSwitchCase="'configuracoes'">
+            <h2>Configurações da Conta</h2>
+            <p>Altere suas informações pessoais, senha e preferências.</p>
+          </div>
+          
+          <div *ngSwitchCase="'avaliacoes'">
+            <h2>Minhas Avaliações</h2>
+            <p>Confira as avaliações que você já fez.</p>
+          </div>
+  
+          <div *ngSwitchCase="'sair'">
+            <h2>Saindo...</h2>
+            <p>Você será redirecionado em breve.</p>
+          </div>
+  
+          <div *ngSwitchDefault>
+            <h2>Bem-vindo(a)!</h2>
+            <p>Selecione uma opção no menu ao lado para começar.</p>
+          </div>
+        </div>
+      </section>
+      </main>
+  
+    <app-footer-principal></app-footer-principal>
+  </body>

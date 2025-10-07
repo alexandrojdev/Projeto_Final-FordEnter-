@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    /* Adicionado para garantir que o layout flex funcione corretamente do header ao footer */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Layout principal com menu lateral e conteúdo */
+.container {
+    display: flex;
+    flex-grow: 1; /* Faz o main ocupar todo o espaço vertical disponível entre o header e o footer */
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+/* Nova classe para o container do menu lateral */
+.menu-lateral {
+    width: 250px; /* Aumentei um pouco para o perfil */
+    flex-shrink: 0; /* Impede que o menu encolha */
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para a seção do perfil */
+.perfil-usuario {
+    padding: 24px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.perfil-usuario img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    object-fit: cover; /* Garante que a imagem não fique distorcida */
+}
+
+.perfil-usuario h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.1em;
+}
+
+
+/* Lista de links (menu) - ajustes menores */
+.lista_site {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ocupa a largura total do .menu-lateral */
+}
+
+.lista_site li {
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+.lista_site li a {
+    display: block;
+    padding: 16px 24px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    transition: all 0.2s ease-in-out;
+}
+
+.lista_site li:hover a {
+    border-left: 4px solid #BF1573;
+    color: #BF1573;
+    background-color: #f1f1f1;
+    padding-left: 20px; /* Compensa a borda */
+}
+
+/* Nova classe para o item ATIVO */
+.lista_site li.ativo a {
+    background-color: #BF1573;
+    color: #fff;
+    border-left: 4px solid #8c0f54; /* Borda um pouco mais escura */
+    padding-left: 20px;
+}
+
+/* Nova classe para a área de conteúdo principal */
+.conteudo-principal {
+    flex-grow: 1; /* Faz esta área ocupar todo o espaço restante */
+    padding: 24px;
+    background-color: #fff;
+}
