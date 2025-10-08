@@ -1,0 +1,178 @@
+/* Variáveis para cores e espaçamentos */
+:host {
+  --cor-primaria: #007bff;
+  --cor-texto: #333;
+  --cor-fundo-card: #fff;
+  --sombra-card: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --borda-radius: 8px;
+}
+
+.container-geral {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos do Carrossel */
+.secao-carrossel {
+  margin-bottom: 50px;
+}
+
+.secao-carrossel .slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 60px; /* Espaço para as setas */
+}
+
+.secao-carrossel .imagem-container {
+  position: relative;
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: var(--borda-radius);
+  box-shadow: var(--sombra-card);
+}
+
+.secao-carrossel .imagem-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.secao-carrossel .imagem-container .avaliacao {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.secao-carrossel .imagem-container .avaliacao .estrela {
+  color: #ffc107;
+  margin-right: 5px;
+}
+
+.secao-carrossel .info-carrossel {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.secao-carrossel .info-carrossel h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--cor-texto);
+}
+.secao-carrossel .info-carrossel p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Estilos da Lista de Cards Detalhada */
+.secao-lista-detalhada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-estabelecimento {
+  display: flex;
+  background-color: var(--cor-fundo-card);
+  border-radius: var(--borda-radius);
+  box-shadow: var(--sombra-card);
+  overflow: hidden;
+  width: 100%;
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 1.5rem; /* Adicionado para compatibilidade */
+}
+
+.card-estabelecimento:hover {
+  transform: translateY(-5px);
+}
+
+.card-estabelecimento .card-imagem {
+  flex: 0 0 200px; /* Largura fixa para a imagem */
+}
+
+.card-estabelecimento .card-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-estabelecimento .card-conteudo {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-estabelecimento .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.card-estabelecimento .card-header h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.card-estabelecimento .avaliacao-card {
+  font-weight: bold;
+  color: var(--cor-texto);
+}
+
+.card-estabelecimento .avaliacao-card .estrela {
+  color: #ffc107;
+}
+
+.card-estabelecimento .servicos {
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.card-estabelecimento .servicos h4 {
+  font-size: 1.1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.card-estabelecimento .servicos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-estabelecimento .servicos li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.card-estabelecimento .servicos .preco {
+  font-weight: 500;
+}
+
+.card-estabelecimento .btn {
+  align-self: flex-end; /* Alinha o botão à direita */
+}
+
+/* Estilos para telas menores (Media Query) */
+@media (max-width: 768px) {
+  .card-estabelecimento {
+    flex-direction: column;
+  }
+
+  .card-estabelecimento .card-imagem {
+    flex: 0 0 200px; /* Mantém a altura da imagem */
+  }
+}

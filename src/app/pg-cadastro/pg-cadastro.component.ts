@@ -58,7 +58,7 @@ export class PgCadastroComponent {
         title: 'Cadastro realizado com sucesso!',
         text: 'Você será redirecionado para a tela de login.'
       }).then(() => {
-        window.location.href = "pg_login.html";
+        window.location.href = "/pg-login";
       });
     });
   }

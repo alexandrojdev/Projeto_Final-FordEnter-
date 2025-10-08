@@ -1,0 +1,48 @@
+<div class="container-geral">
+  <section class="secao-carrossel">
+    <carousel [isAnimated]="true">
+      <slide *ngFor="let est of estabelecimentos">
+        <div class="slide-content">
+          <div class="imagem-container">
+            <img [src]="est.imagemUrl" [alt]="'Foto de ' + est.nome">
+            <div class="avaliacao">
+              <span class="estrela">&#9733;</span> {{ est.avaliacao }}
+            </div>
+          </div>
+          <div class="info-carrossel">
+            <h3>{{ est.nome }}</h3>
+            <p>{{ est.endereco }}</p>
+          </div>
+        </div>
+      </slide>
+    </carousel>
+  </section>
+
+  <section class="secao-lista-detalhada">
+    <div *ngFor="let est of estabelecimentos" class="card-estabelecimento mb-4">
+      <div class="card-imagem">
+        <img [src]="est.imagemUrl" [alt]="'Foto de ' + est.nome">
+      </div>
+      <div class="card-conteudo">
+        <div class="card-header">
+          <h3>{{ est.nome }}</h3>
+          <div class="avaliacao-card">
+            <span class="estrela">&#9733;</span> {{ est.avaliacao }}
+          </div>
+        </div>
+        <div class="servicos">
+          <h4>Serviços:</h4>
+          <ul>
+            <li *ngFor="let servico of est.servicos">
+              <span>{{ servico.nome }}</span>
+              <span class="preco">{{ servico.preco | currency:'BRL' }}</span>
+            </li>
+          </ul>
+        </div>
+        <button class="btn btn-primary" (click)="reservar(est.nome)">
+          Reservar
+        </button>
+      </div>
+    </div>
+  </section>
+</div>

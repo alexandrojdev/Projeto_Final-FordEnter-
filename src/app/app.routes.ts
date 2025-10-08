@@ -11,6 +11,7 @@ import { PgSegurancaComponent } from './componentes/pg-seguranca/pg-seguranca.co
 import { PgContatoComponent } from './componentes/pg-contato/pg-contato.component';
 import { BuscarServicosComponent } from './componentes/buscar-servicos/buscar-servicos.component';
 import { PgUsuarioComponent } from './componentes/pg-usuario/pg-usuario.component';
+import { PgEstabelecimentosComponent } from './componentes/pg-estabelecimentos/pg-estabelecimentos.component';
 
 export const routes: Routes = [
 
@@ -65,5 +66,9 @@ export const routes: Routes = [
     {
         path:'pg-usuario',
         component: PgUsuarioComponent,
+    },
+    {
+        path:'pg-estabelecimentos',
+        component: PgEstabelecimentosComponent,
     }
 ];

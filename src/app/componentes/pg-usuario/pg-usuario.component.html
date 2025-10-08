@@ -34,17 +34,18 @@
         <div [ngSwitch]="conteudoSelecionado">
           <div *ngSwitchCase="'agendamentos'">
             <h2>Meus Agendamentos</h2>
-            <p>Aqui você verá a lista dos seus próximos agendamentos.</p>
+            <p>Você ainda não possui agendamentos!</p>
             </div>
   
           <div *ngSwitchCase="'familia'">
             <h2>Família & Amigos</h2>
-            <p>Gerencie aqui as pessoas da sua família e amigos.</p>
+            <p>Você ainda não possui membros da família ou amigos cadastrados, mas quando tiver,<br>
+            poderá gerenciar aqui.</p>
           </div>
   
           <div *ngSwitchCase="'favoritos'">
             <h2>Meus Favoritos</h2>
-            <p>Veja aqui os serviços e profissionais que você marcou como favoritos.</p>
+            <p>Você ainda não possui estabelecimentos favoritados.</p>
           </div>
   
           <div *ngSwitchCase="'configuracoes'">
@@ -54,7 +55,7 @@
           
           <div *ngSwitchCase="'avaliacoes'">
             <h2>Minhas Avaliações</h2>
-            <p>Confira as avaliações que você já fez.</p>
+            <p>Você ainda não realizou avaliações.</p>
           </div>
   
           <div *ngSwitchCase="'sair'">
