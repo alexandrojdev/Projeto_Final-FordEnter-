@@ -8,7 +8,7 @@
     align-items: center;
     /* Usa space-between para separar o logo e o menu */
     justify-content: space-between; 
-    padding: 0 150px;
+    padding: 0 10px;
     background-color: #fff;
     z-index: 10; 
 }
@@ -29,7 +29,7 @@
     display: flex;
     gap: 70px;
     list-style: none;
-    padding: 6px 30px;
+    padding: 6px 70px;
     margin: 0; 
     background-color: #BF1573;
     border-radius: 25px;

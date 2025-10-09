@@ -1,6 +1,6 @@
 /* Variáveis para cores e espaçamentos */
 :host {
-  --cor-primaria: #007bff;
+  --cor-primaria: #BF1573;
   --cor-texto: #333;
   --cor-fundo-card: #fff;
   --sombra-card: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -160,6 +160,14 @@
 
 .card-estabelecimento .servicos .preco {
   font-weight: 500;
+}
+
+.btn-reservar {
+    background-color:#BF1573;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
 }
 
 .card-estabelecimento .btn {

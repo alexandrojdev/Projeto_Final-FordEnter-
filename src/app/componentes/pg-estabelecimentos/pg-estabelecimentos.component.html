@@ -1,3 +1,7 @@
+<app-cabecalho-um></app-cabecalho-um>
+<app-cabecalho-dois></app-cabecalho-dois>
+<app-buscar-servicos></app-buscar-servicos>
+
 <div class="container-geral">
   <section class="secao-carrossel">
     <carousel [isAnimated]="true">
@@ -39,10 +43,12 @@
             </li>
           </ul>
         </div>
-        <button class="btn btn-primary" (click)="reservar(est.nome)">
-          Reservar
+        <button class="btn-reservar" (click)="reservar(est.nome)">
+          Reservar agora
         </button>
       </div>
     </div>
   </section>
 </div>
+
+<app-footer-principal></app-footer-principal>
