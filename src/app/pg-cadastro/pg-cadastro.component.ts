@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // IMPORTANTE
+import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-pg-cadastro',
   standalone: true,
-  imports: [FormsModule, RouterLink],  // <- preciso para ngModel e ngForm
+  imports: [FormsModule, RouterLink],
   templateUrl: './pg-cadastro.component.html',
   styleUrls: ['./pg-cadastro.component.css']
 })
@@ -21,8 +21,13 @@ export class PgCadastroComponent {
   };
 
   mascaraCPF() {
+    // Mantém apenas os dígitos
     let v = this.usuario.cpf.replace(/\D/g, '');
-    if (v.length > 11) v = v.slice(0, 11);
+    // Limita a 11 dígitos
+    if (v.length > 11) {
+      v = v.slice(0, 11);
+    }
+    // Aplica a máscara
     v = v.replace(/(\d{3})(\d)/, "$1.$2");
     v = v.replace(/(\d{3})(\d)/, "$1.$2");
     v = v.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
@@ -30,6 +35,16 @@ export class PgCadastroComponent {
   }
 
   onSubmit(form: any) {
+    // Alteração: Adicionada validação para o checkbox de termos
+    if (!this.usuario.concorda) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Atenção!',
+        text: 'Você deve concordar com os Termos de Serviço e a Política de Privacidade para continuar.'
+      });
+      return;
+    }
+
     if (this.usuario.senha !== this.usuario.confirmarSenha) {
       Swal.fire({
         icon: 'error',
@@ -39,11 +54,12 @@ export class PgCadastroComponent {
       return;
     }
 
+    // Alteração: Validação de 11 dígitos no CPF agora é mais explícita.
     if (this.usuario.cpf.replace(/\D/g, '').length !== 11) {
       Swal.fire({
         icon: 'error',
         title: 'CPF inválido!',
-        text: 'O CPF deve conter 11 dígitos.'
+        text: 'O CPF deve conter exatamente 11 dígitos.'
       });
       return;
     }
